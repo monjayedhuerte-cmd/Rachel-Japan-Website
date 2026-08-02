@@ -1,0 +1,1355 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#08121d;
+    color:white;
+    overflow-x:hidden;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.65)
+        ),
+        url("../images/background/gallery\ background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+/* Overlay */
+
+.background-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        rgba(4, 10, 20, 0.55),
+        rgba(4, 10, 20, 0.65)
+    );
+    z-index: 0;
+}
+
+/* Moon */
+
+.moon{
+
+position:absolute;
+
+right:8%;
+
+top:8%;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:radial-gradient(
+
+circle,
+
+rgba(255,255,255,.9),
+
+rgba(255,255,255,.08)
+
+);
+
+filter:blur(2px);
+
+box-shadow:
+
+0 0 80px rgba(255,255,255,.25),
+
+0 0 150px rgba(255,255,255,.08);
+
+opacity:.4;
+
+}
+
+/* Hero */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:800px;
+
+    padding:30px;
+
+}
+
+.jp{
+    font-family:'Noto Serif JP',serif;
+    font-size:42px;
+    color:#ffd9e6;
+    letter-spacing:4px;
+    margin-bottom:5px;
+}
+
+.jp-subtitle{
+
+    color:#f3d5df;
+
+    font-size:18px;
+
+    font-style:italic;
+
+    margin-bottom:35px;
+
+    letter-spacing:2px;
+
+}
+
+.welcome{
+
+    color:#f9dce7;
+
+    font-size:20px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+text-shadow:
+
+0 0 15px #ffffff,
+
+0 0 30px #ffc7d7,
+
+0 0 60px #ff9dbd;
+
+}
+
+.hero h2{
+
+    font-size:34px;
+
+    font-weight:300;
+
+    color:#ffd8e5;
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+
+}
+
+.quote{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+    color:#f5f5f5;
+
+}
+
+button{
+
+transition:.35s;
+
+}
+
+button:hover{
+
+transform:
+
+translateY(-5px)
+scale(1.05);
+
+box-shadow:
+
+0 12px 30px
+
+rgba(255,182,193,.35);
+
+}
+
+/* Scroll */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:25px;
+
+    font-size:34px;
+
+    animation:bounce 2s infinite;
+
+}
+
+/* ==========================
+   Sakura Petals
+========================== */
+
+#petals-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:3;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    width:18px;
+
+    height:14px;
+
+    background:linear-gradient(
+        145deg,
+        #ffd9ea,
+        #f8b6cf
+    );
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity:.85;
+
+    filter:drop-shadow(
+        0 0 6px rgba(255,190,210,.35)
+    );
+
+    animation-name:fall;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:
+
+translateY(-10vh)
+
+translateX(0)
+
+rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:.9;
+
+}
+
+50%{
+
+transform:
+
+translateY(50vh)
+
+translateX(40px)
+
+rotate(180deg);
+
+}
+
+100%{
+
+transform:
+
+translateY(110vh)
+
+translateX(-60px)
+
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* =====================
+   Lanterns
+===================== */
+
+.lantern{
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    z-index:8;
+
+    transform-origin:top center;
+
+}
+
+.lantern-left{
+
+    left:70px;
+
+    animation:swingLeft 4s ease-in-out infinite;
+
+}
+
+.lantern-right{
+
+    right:70px;
+
+    animation:swingRight 4s ease-in-out infinite;
+
+}
+
+@keyframes swingLeft{
+
+0%{transform:rotate(3deg);}
+50%{transform:rotate(-3deg);}
+100%{transform:rotate(3deg);}
+
+}
+
+@keyframes swingRight{
+
+0%{transform:rotate(-3deg);}
+50%{transform:rotate(3deg);}
+100%{transform:rotate(-3deg);}
+
+}
+
+#fireflies{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:2;
+
+}
+
+.firefly{
+
+position:absolute;
+
+width:4px;
+
+height:4px;
+
+border-radius:50%;
+
+background:#ffe97d;
+
+box-shadow:
+
+0 0 12px #ffe97d,
+
+0 0 20px #fff6b8;
+
+animation:floatFirefly linear infinite;
+
+}
+
+@keyframes floatFirefly{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-220px);
+
+opacity:0;
+
+}
+
+}
+
+#music-btn{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+padding:14px 24px;
+
+border:none;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(12px);
+
+color:white;
+
+cursor:pointer;
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+#music-btn:hover{
+
+background:rgba(255,255,255,.28);
+
+}
+
+#gallery{
+
+    position: relative;
+
+    padding: 120px 10%;
+
+    background:
+        linear-gradient(
+            rgba(5,10,20,.55),
+            rgba(8,15,28,.65)
+        ),
+        url("../images/background/gallery\ background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+.gallery-title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.gallery-title h2{
+
+font-size:58px;
+
+font-family:'Noto Serif JP';
+
+color:#ffd9e6;
+
+margin-bottom:10px;
+
+}
+
+.gallery-title h3{
+
+font-size:42px;
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.gallery-title p{
+
+font-size:22px;
+
+color:#ddd;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.7;
+
+}
+
+.gallery-title p{
+
+    font-size:28px;
+    color:#f6bfd3;
+    margin-top:10px;
+
+}
+
+.gallery-title span{
+
+    display:block;
+    margin-top:20px;
+    color:#ddd;
+    font-size:22px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+
+}
+
+.photo-card,
+
+.app-card,
+
+.destination-card{
+
+border:1px solid
+
+rgba(255,255,255,.12);
+
+background:
+
+rgba(255,255,255,.08);
+
+backdrop-filter:
+
+blur(15px);
+
+}
+
+.photo-card p{
+
+padding:18px;
+
+background:rgba(0,0,0,.55);
+
+color:white;
+
+font-size:22px;
+
+font-weight:600;
+
+letter-spacing:.5px;
+
+text-shadow:
+
+0 2px 8px rgba(0,0,0,.8);
+
+}
+
+
+.photo-card:hover{
+
+    transform:
+        translateY(-10px)
+        rotate(-2deg);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.photo-card img{
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.photo-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+overflow:hidden;
+
+transition:.45s;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.photo-card:hover{
+
+transform:
+
+translateY(-14px)
+
+scale(1.03);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.55);
+
+}
+
+.divider{
+
+height:120px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:50px;
+
+background:linear-gradient(
+#09131d,
+#0b1827
+);
+
+color:#ffd9e6;
+
+}
+
+/* =====================================
+   APPRECIATION SECTION
+===================================== */
+
+#appreciation{
+
+    position:relative;
+
+    padding:120px 10%;
+
+    background:
+        linear-gradient(
+            rgba(5,10,20,.55),
+            rgba(8,15,28,.65)
+        ),
+        url("../images/background/gallery\ background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+}
+
+.section-header{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+
+    margin-bottom:70px;
+
+}
+
+.jp-title{
+
+    font-family:'Noto Serif JP',serif;
+
+    color:#ffd6e6;
+
+    font-size:38px;
+
+    letter-spacing:5px;
+
+    margin-bottom:15px;
+
+}
+
+.section-header h2{
+
+    font-size:52px;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.section-description{
+
+    font-size:22px;
+
+    color:#dddddd;
+
+    line-height:1.8;
+
+}
+
+.appreciation-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.app-card{
+
+    background:
+    rgba(255,255,255,.07);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.45s;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.35);
+
+}
+
+.app-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:#f6bfd3;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.icon{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.app-card h3{
+
+    color:#ffd9e6;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.app-card p{
+
+    color:#eeeeee;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+/* ====================================
+        LETTER SECTION
+==================================== */
+
+#letter{
+
+    padding:150px 10%;
+
+    background:
+
+    linear-gradient(
+            rgba(5,10,20,.55),
+            rgba(8,15,28,.65)
+        ),
+
+    url("../images/background/1000_F_883365367_LlhvXxs4FE6chfjJM6FL9aFquPeIDGnm.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+.letter-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.letter-container h2{
+
+    text-align:center;
+
+    font-size:55px;
+
+    color:white;
+
+    margin-bottom:45px;
+
+}
+
+.letter-paper{
+
+    background:
+    rgba(255,248,235,.94);
+
+    color:#333;
+
+    padding:60px;
+
+    border-radius:18px;
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.45);
+
+    backdrop-filter:blur(12px);
+
+    line-height:2;
+
+    font-size:22px;
+
+}
+
+.letter-paper p{
+
+    margin-bottom:30px;
+
+}
+
+.signature{
+
+    text-align:right;
+
+    margin-top:60px;
+
+    font-size:28px;
+
+    color:#8b3d5f;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+/* ==========================
+      JOURNEY
+========================== */
+
+#journey{
+
+padding:140px 10%;
+
+background:
+
+linear-gradient(
+
+rgba(5,12,20,.45),
+
+rgba(6,12,25,.55)
+
+),
+
+url("../images/background/journey\ wallpaper.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+}
+
+.timeline{
+
+position:relative;
+
+margin-top:70px;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:4px;
+
+background:#f6bfd3;
+
+transform:translateX(-50%);
+
+}
+
+.timeline-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin:90px 0;
+
+gap:50px;
+
+}
+
+.timeline-item.reverse{
+
+flex-direction:row-reverse;
+
+}
+
+.timeline-image{
+
+flex:1;
+
+}
+
+.timeline-image img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.45);
+
+}
+
+.timeline-content{
+
+flex:1;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(14px);
+
+padding:35px;
+
+border-radius:20px;
+
+color:white;
+
+}
+
+.timeline-content h3{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+color:#ffd9e6;
+
+}
+
+.timeline-content p{
+
+font-size:22px;
+
+line-height:1.8;
+
+}
+
+/* ===================================
+        FAREWELL
+=================================== */
+
+#farewell{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 10%;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.65)
+    ),
+    url("../images/background/japannight.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+.farewell-content{
+
+    max-width:850px;
+
+    z-index:2;
+
+}
+
+.farewell-content h2{
+
+    font-size:65px;
+
+    color:white;
+
+    margin-bottom:35px;
+
+}
+
+.farewell-message{
+
+    color:#eeeeee;
+
+    font-size:24px;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+
+.signature{
+
+    margin-top:50px;
+
+    font-size:32px;
+
+    color:#ffd9e6;
+
+    letter-spacing:3px;
+
+}
+
+#backTop{
+
+    margin-top:50px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#f7bfd2;
+
+    color:#222;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#backTop:hover{
+
+    transform:translateY(-4px);
+
+    background:white;
+
+}
+
+footer{
+
+    background:#f868e0;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#cccccc;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   SCROLL ANIMATION
+=========================== */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.15);
+
+backdrop-filter:blur(18px);
+
+z-index:999;
+
+transition:.4s;
+
+}
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#08111b;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#f7bfd2;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:white;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.quote{
+
+font-size:18px;
+
+}
+
+.gallery-grid,
+
+.appreciation-grid,
+
+.destination-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline::before{
+
+display:none;
+
+}
+
+.timeline-item,
+
+.timeline-item.reverse{
+
+flex-direction:column;
+
+}
+
+nav{
+
+padding:18px;
+
+}
+
+}
+
+#loader{
+
+position:fixed;
+
+inset:0;
+
+background:#08111b;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+transition:opacity 1s;
+
+}
+
+.loader-content{
+
+text-align:center;
+
+color:white;
+
+}
+
+.loader-content h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.loader-petal{
+
+font-size:50px;
+
+animation:spin 2s linear infinite;
+
+}
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
