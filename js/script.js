@@ -55,3 +55,31 @@ document.querySelectorAll("section").forEach(section=>{
     observer.observe(section);
 
 });
+
+const restartBtn = document.getElementById("journeyAgain");
+const fade = document.getElementById("pageFade");
+
+if (restartBtn && fade) {
+
+    restartBtn.addEventListener("click", () => {
+
+        fade.classList.add("show");
+
+        setTimeout(() => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }, 1200);
+
+        setTimeout(() => {
+
+            fade.classList.remove("show");
+
+        }, 2800);
+
+    });
+
+}

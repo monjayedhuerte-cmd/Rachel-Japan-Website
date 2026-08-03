@@ -28,18 +28,26 @@ const ripples=document.querySelectorAll(".ripple");
 
 coin.addEventListener("click",()=>{
 
+    const splash=document.querySelector(".splash");
+
+    const pond=document.querySelector(".pond");
+
     coin.classList.remove("coin-drop");
-
     void coin.offsetWidth;
-
     coin.classList.add("coin-drop");
+
+    pond.classList.remove("magic");
+    void pond.offsetWidth;
+    pond.classList.add("magic");
+
+    splash.classList.remove("active");
+    void splash.offsetWidth;
+    splash.classList.add("active");
 
     ripples.forEach(r=>{
 
         r.classList.remove("showRipple");
-
         void r.offsetWidth;
-
         r.classList.add("showRipple");
 
     });
@@ -48,10 +56,13 @@ coin.addEventListener("click",()=>{
 
     setTimeout(()=>{
 
-        message.innerHTML=wishes[random];
+        message.textContent=wishes[random];
 
         scroll.classList.add("show");
 
-    },900);
+        coin.style.opacity="1";
+        coin.classList.remove("coin-drop");
+
+    },1300);
 
 });
