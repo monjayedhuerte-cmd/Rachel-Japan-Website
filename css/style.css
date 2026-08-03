@@ -1530,3 +1530,90 @@ transform:translateY(-12px);
 }
 
 }
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    /* Hero Section */
+    .hero {
+        min-height: 90vh;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+
+    /* Cards */
+    .card-container,
+    .projects-container,
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* Sections */
+    section {
+        padding: 50px 20px;
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+p {
+    line-height: 1.7;
+}
