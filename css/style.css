@@ -3471,3 +3471,417 @@ rotate(720deg);
     }
 
 }
+
+/*=================================================
+        DISCOVER THE SOUL OF JAPAN
+==================================================*/
+
+.culture-section{
+
+    position:relative;
+
+    padding:120px 8%;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(8,12,25,.55),
+        rgba(8,12,25,.55)
+    ),
+    url("../images/background/gallery\ background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+.culture-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,255,255,.08),
+    transparent 60%);
+
+    pointer-events:none;
+
+}
+
+.culture-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+.culture-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.culture-tag{
+
+    display:inline-block;
+
+    padding:10px 28px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+.culture-header h2{
+
+    color:white;
+
+    font-size:3rem;
+
+    margin:25px 0 15px;
+
+}
+
+.culture-header p{
+
+    color:#ddd;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+.culture-nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:60px;
+
+}
+
+.culture-btn{
+
+    padding:14px 26px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+
+    font-size:15px;
+
+}
+
+.culture-btn:hover{
+
+    transform:translateY(-6px);
+
+    background:#ff7aa2;
+
+}
+
+.culture-btn.active{
+
+    background:#ff5f9e;
+
+    box-shadow:0 0 25px rgba(255,95,158,.45);
+
+}
+
+.culture-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:45px;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:35px;
+
+    padding:40px;
+
+    transition:.6s;
+
+    transform-style:preserve-3d;
+
+}
+
+.culture-card.change{
+
+    transform:
+
+    rotateY(8deg)
+
+    scale(.98);
+
+}
+
+.culture-image{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+.culture-image img{
+
+    width:100%;
+    display:block;
+    border-radius:25px;
+
+    transition:
+        opacity .4s ease,
+        transform .8s ease;
+
+}
+
+.culture-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.culture-content h3{
+
+    color:white;
+
+    font-size:2.4rem;
+
+    margin-bottom:20px;
+
+}
+
+.culture-content p{
+
+    color:#eee;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.culture-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.info-box{
+
+    background:rgba(255,255,255,.08);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.info-box:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.info-box h4{
+
+    color:#ffd166;
+
+    margin-bottom:10px;
+
+}
+
+.info-box p{
+
+    margin:0;
+
+    color:#ddd;
+
+}
+
+
+@media(max-width:992px){
+
+    .culture-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .culture-header h2{
+
+        font-size:2.3rem;
+
+    }
+
+    .culture-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* Floating Lanterns */
+
+.floating-lanterns{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.floating-lanterns span{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    font-size:42px;
+
+    opacity:.35;
+
+    animation:lanternFloat 18s linear infinite;
+
+}
+
+.floating-lanterns span:nth-child(1){
+
+    left:10%;
+    animation-delay:0s;
+
+}
+
+.floating-lanterns span:nth-child(2){
+
+    left:28%;
+    animation-delay:5s;
+
+}
+
+.floating-lanterns span:nth-child(3){
+
+    left:50%;
+    animation-delay:10s;
+
+}
+
+.floating-lanterns span:nth-child(4){
+
+    left:72%;
+    animation-delay:3s;
+
+}
+
+.floating-lanterns span:nth-child(5){
+
+    left:90%;
+    animation-delay:8s;
+
+}
+
+@keyframes lanternFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.4;
+
+    }
+
+    100%{
+
+        transform:translateY(-130vh);
+
+        opacity:0;
+
+    }
+
+}
+
+.culture-progress{
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:25px;
+
+    font-size:18px;
+
+}
