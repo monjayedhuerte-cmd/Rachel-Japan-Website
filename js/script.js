@@ -1,30 +1,38 @@
 const btn = document.getElementById("enter");
 
-btn.addEventListener("mouseover",()=>{
+if(btn){
 
-btn.innerHTML="🌸 Welcome";
+    btn.addEventListener("mouseover",()=>{
 
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.innerHTML="🌸 Begin Journey";
-
-});
-
-const backTop = document.getElementById("backTop");
-
-backTop.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
+        btn.innerHTML="🌸 Welcome";
 
     });
 
-});
+    btn.addEventListener("mouseleave",()=>{
+
+        btn.innerHTML="🌸 Begin Journey";
+
+    });
+
+}
+
+const backTop = document.getElementById("backTop");
+
+if(backTop){
+
+    backTop.addEventListener("click",()=>{
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
 
 const observer = new IntersectionObserver(entries=>{
 
@@ -47,4 +55,3 @@ document.querySelectorAll("section").forEach(section=>{
     observer.observe(section);
 
 });
-

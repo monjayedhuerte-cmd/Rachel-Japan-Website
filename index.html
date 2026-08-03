@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/clock.css">
 
 </head>
 
@@ -187,6 +188,127 @@
     </div>
 
 </header>
+
+<!-- ======================================
+        TOKYO ARRIVAL CLOCK
+====================================== -->
+
+<section class="arrival-section">
+
+    <div class="arrival-card">
+
+        <!-- Top -->
+
+        <div class="arrival-header">
+
+            <span class="arrival-tag">
+                ✈ ARRIVED IN JAPAN
+            </span>
+
+            <h2>
+                TOKYO
+            </h2>
+
+            <p class="japanese-name">
+                東京・日本
+            </p>
+
+        </div>
+
+        <!-- Middle -->
+
+        <div class="arrival-content">
+
+            <!-- Analog Clock -->
+
+            <div class="analog-container">
+                
+                <div class="analog-clock">
+                    
+                    <!-- Numbers -->
+                     
+                    <span class="number n12">12</span>
+                    <span class="number n3">3</span>
+                    <span class="number n6">6</span>
+                    <span class="number n9">9</span>
+                    
+                    <!-- Hour markers -->
+                     <div class="marker m1"></div>
+                     <div class="marker m2"></div>
+                     <div class="marker m3"></div>
+                     <div class="marker m4"></div>
+                     <div class="marker m5"></div>
+                     <div class="marker m6"></div>
+                     <div class="marker m7"></div>
+                     <div class="marker m8"></div>
+                     
+                     <!-- Clock Hands -->
+                      <div class="hand hour" id="hour-hand"></div>
+                      <div class="hand minute" id="minute-hand"></div>
+                      <div class="hand second" id="second-hand"></div>
+                      <div class="center-dot"></div>
+                    
+                    </div>
+                
+                </div>
+
+            <!-- Information -->
+
+            <div class="arrival-info">
+
+                <div class="info-box">
+
+                    <span>📅 TODAY</span>
+
+                    <h3 id="tokyo-date">
+                        Loading...
+                    </h3>
+
+                </div>
+
+                <div class="info-box">
+
+                    <span>🌤 WEATHER</span>
+
+                    <h3>
+                        Pleasant
+                    </h3>
+
+                    <p>Perfect for exploring.</p>
+
+                </div>
+
+                <div class="info-box">
+
+                    <span>📍 LOCATION</span>
+
+                    <h3>Tokyo, Japan</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+
+        <div class="digital-board">
+
+            <p>LIVE TOKYO TIME</p>
+
+            <h1 id="tokyo-time">
+                00:00:00
+            </h1>
+
+            <span>
+                🇯🇵 Welcome to Japan
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
 
 <div class="premium-divider">
 
@@ -794,8 +916,8 @@
 </audio>
 
 <script src="js/music.js"></script>
-
 <script src="js/passport.js"></script>
+<script src="js/clock.js"></script>
 
 </body>
 
