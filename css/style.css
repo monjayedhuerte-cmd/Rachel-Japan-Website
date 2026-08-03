@@ -1383,66 +1383,6 @@ padding:18px;
 
 }
 
-#loader{
-
-position:fixed;
-
-inset:0;
-
-background:#08111b;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:99999;
-
-transition:opacity 1s;
-
-}
-
-.loader-content{
-
-text-align:center;
-
-color:white;
-
-}
-
-.loader-content h1{
-
-font-size:60px;
-
-margin-bottom:20px;
-
-}
-
-.loader-petal{
-
-font-size:50px;
-
-animation:spin 2s linear infinite;
-
-}
-
-@keyframes spin{
-
-from{
-
-transform:rotate(0deg);
-
-}
-
-to{
-
-transform:rotate(360deg);
-
-}
-
-}
-
 /* ===================================
         CINEMATIC LOADER
 =================================== */
