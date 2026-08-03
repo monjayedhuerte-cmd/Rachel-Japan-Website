@@ -47,19 +47,3 @@ document.querySelectorAll("section").forEach(section=>{
     observer.observe(section);
 
 });
-
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.opacity="0";
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.display="none";
-
-},1000);
-
-},2000);
-
-});
