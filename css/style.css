@@ -977,7 +977,7 @@ filter:drop-shadow(0 0 15px #ffb6d5);
 .letter-paper{
 
     background:
-    rgba(255,248,235,.94);
+    url("../images/background/washipaper.avif");
 
     color:#333;
 
@@ -1011,7 +1011,7 @@ filter:drop-shadow(0 0 15px #ffb6d5);
 
     font-size:28px;
 
-    color:#8b3d5f;
+    color:#ece8e8;
 
     font-family:'Cormorant Garamond',serif;
 
@@ -1218,7 +1218,7 @@ line-height:1.8;
 
     font-size:32px;
 
-    color:#ffd9e6;
+    color:#cecace;
 
     letter-spacing:3px;
 
@@ -3007,7 +3007,12 @@ rotate(720deg);
 
     background:
 
-    linear-gradient(180deg,#081321,#030712);
+    linear-gradient(
+        rgba(10,15,30,.82),
+        rgba(10, 15, 30, 0.466)
+    ),
+
+    url("../images/background/background4.png");
 
     color:white;
 
