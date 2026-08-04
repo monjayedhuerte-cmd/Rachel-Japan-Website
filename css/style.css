@@ -24,11 +24,7 @@ body{
     height:100vh;
 
     background:
-        linear-gradient(
-            rgba(0,0,0,0.55),
-            rgba(0,0,0,0.65)
-        ),
-        url("../images/background/gallery\ background.png");
+        url("../images/background/background1.png");
 
     background-size: cover;
     background-position: center;
@@ -2317,10 +2313,7 @@ rotate(720deg);
 
     background:
 
-    linear-gradient(rgba(6,15,35,.80),
-    rgba(6,15,35,.90)),
-
-    url("../images/background/japanese\ garden\ night.jpg");
+    url("../images/background/Wishing-well.png");
 
     background-size:cover;
 
